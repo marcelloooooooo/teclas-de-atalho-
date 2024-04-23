@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclas de Atalho</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        #corpo {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        a img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #mensagem-form {
+            margin-top: 20px;
+            display: left;
+            align-items: center;
+        }
+
+        #mensagem-input {
+            flex: 1;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            width: 30%;
+        }
+
+        #enviar-btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px;
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Minha Página</h1>
+        <nav>
+            <a href="https://ge.globo.com/motor/formula-1/">Home</a>
+            <a href="https://www.globo.com">Contato</a>
+            <a href="https://ge.globo.com/motor/formula-1/">Sobre</a>
+        </nav>
+    </header>
+    <div id="corpo">
+        <p>
+            Atalhos utilizados na página:<br>
+            CTRL + Q serve para acessar o link sobre a página;<br>
+            CTRL + I serve para acessar o link da imagem da página;<br>
+            CTRL + M serve para acessar o bloco de mensagem da página.
+        </p>
+        <a href="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/03/GettyImages-1387887464.jpg?w=1220&h=674&crop=1" target="_blank">
+            <img src="download.png" alt="">
+        </a>
+    </div>
+    <div id="mensagem-form">
+        <input type="text" id="mensagem-input" placeholder="Digite sua mensagem">
+        <button id="enviar-btn">Enviar</button>
+    </div>
+    <footer>
+        Desenvolvido por Marcello Ribeiro Silva
+    </footer>
+    <script>
+        document.addEventListener("keydown", function(event) {
+            if (event.ctrlKey && event.key === "q") {
+                window.open("https://ge.globo.com/motor/formula-1/");
+            }
+            if (event.ctrlKey && event.key === "i") {
+                window.open("https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/03/GettyImages-1387887464.jpg?w=1220&h=674&crop=1");
+            }
+            if (event.ctrlKey && event.key === "m") {
+                document.getElementById("mensagem-input").focus();
+            }
+        });
+    </script>
+</body>
+</html>
